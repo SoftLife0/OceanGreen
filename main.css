@@ -54,7 +54,7 @@ img{
 
 /* header */
 .header{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/wal3.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/w.jpg") center/cover no-repeat;
     min-height: 100vh;
     color: #fff;
     padding: 25px;
@@ -201,16 +201,22 @@ img{
 
 /* service */
 .services{
-    margin: 40px 0;
+    margin: 30px 0;
 }
 .service{
     display: flex;
     margin: 30px 0;
 }
+.service-icon  img{
+    flex: 30%;
+    align-self: flex-start;
+    font-size: 25px;
+    color: #252525;
+}
 .service-icon{
     flex: 30%;
     align-self: flex-start;
-    font-size: 48px;
+    font-size: 25px;
     color: #252525;
 }
 .service-content{
@@ -228,22 +234,18 @@ img{
 @media(min-width: 992px){
     .services-container{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 30px;
     }
-    .title h2{
-        font-size: 10px!important;
-    }
+   
 }
 @media(max-width: 500px){
-    .title h2{
-        font-size: 24px;
-    }
+    
 }
 
 /* booking form */
 .book{
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("images/banner-img.jpg") center/cover no-repeat;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("images/banner-img.jpg") center/cover no-repeat; */
     color: #fff;
     padding: 40px 60px;
 }
@@ -306,6 +308,8 @@ img{
         padding-right: 20px;
     }
 }
+
+
 
 /* room */
 
@@ -384,6 +388,57 @@ img{
         flex-direction: row-reverse;
     }
 }
+
+/*------------gallary------------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 80%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .close:hover {
+    color: #06D85F;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .box {
+      width: 70%;
+    }
+  }
+  
+  
 
 /* customers */
 
@@ -487,6 +542,26 @@ img{
 .social-icons li:hover{
     background: var(--yellow);
     color: #2e2e2e;
+}
+.social-head-icons{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.social-head-icons li{
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    background: var(--yellow);
+    border-radius: 50%;
+    transition: var(--transition);
+    cursor: pointer;
+    color: #252525;
+}
+.social-head-icons li:hover{
+    background: #2e2e2e;
+    color: var(--yellow);
 }
 .contact-item span{
     display: block;

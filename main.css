@@ -2,20 +2,34 @@
 
 :root{
     --transition: all 0.7s ease;
-    --yellow: #f9d342;
+    --yellow: #358600;
     --dark: #292826;
+    --green: #358600;
 }
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
 }
 html{
     scroll-behavior: smooth;
 }
 body{
     line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+.pill-button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
 }
 .btn{
     font-size: 16px;
@@ -88,7 +102,7 @@ img{
     font-size: 45px;
     font-weight: 700;
     color: #fff;
-    border-bottom: 1px solid var(--yellow);
+    border-bottom: 1px solid #358600;
 }
 .head-bottom p{
     font-size: 22px;
@@ -571,11 +585,11 @@ img{
     margin: 0 5px;
     width: 35px;
     height: 35px;
-    background: var(--yellow);
+    background: #358600;
     border-radius: 50%;
     transition: var(--transition);
     cursor: pointer;
-    color: #252525;
+    color: #fff;
 }
 .social-head-icons li:hover{
     background: #2e2e2e;

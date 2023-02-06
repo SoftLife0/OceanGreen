@@ -17,6 +17,12 @@
         <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link rel = "icon" href = "images/logo.png" type = "image/png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    $('.carousel').carousel({
+  interval: 1500
+})
+  </script>
     </head>
     <body>
         <script>
@@ -189,15 +195,24 @@
                 </div>
                 <div class = "form-item">
                     <label for = "adult">Adults: </label>
-                    <input type = "number" min = "1" value = "1" id = "adult">
+                    <input type = "number" min = "0" value = "1" id = "adult">
                 </div>
                 <div class = "form-item">
                     <label for = "children">Children: </label>
-                    <input type = "number" min = "1" value = "1" id = "children">
+                    <input type = "number" min = "0" value = "1" id = "children">
                 </div>
-                
                 <div class = "form-item">
-                    <input type = "submit" class = "head-btn"value = "Book Now" style="margin-top: 4vh; background: var(--yellow); font-weight: 900; color: black; letter-spacing: 1.5px;">
+                    <label for = "rooms">Room Type: </label>
+                    <select name="rooms" id="">
+                      <option value>--Select--</option>
+                      <option value="room">Indigo 25/26</option>
+                      <option value="room">Pelican 6</option>
+                      <option value="room">Silver House 1</option>
+                    </select>
+                    
+                </div>
+                <div class = "form-item">
+                    <input type = "submit" class = "head-btn"value = "Book Now" style="margin-top: 4vh; background: var(--yellow); font-weight: 900; color: #fff; letter-spacing: 1.5px;">
                 </div>
             </form>
         </div>
@@ -211,10 +226,31 @@
                 <!-- single room -->
                 <article class = "room">
                     <div class = "room-image">
-                        <img src = "images/indigo.jpeg" alt = "room image"> 
+                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                
+                            <div class="carousel-item active" data-bs-interval="2000">
+                              <img src="images/indigo.jpeg" class="d-block w-100 img-caro" alt="...">
+                            </div>
+                            
+                            <div class="carousel-item" data-bs-interval="2000">
+                              <img src="images/ind1.jpg" class="d-block w-100 img-caro" alt="...">
+
+                            </div>
+                            
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
                     </div>
                     <div class = "room-text">
-                        <h3 style="color: var(--yellow);">Indigo 25/26</h3>
+                        <h3 class="rate" style="color: var(--yellow); font-weight: 800; letter-spacing: 2px;">Indigo 25/26</h3>
                         <ul>
                             <li>
                                 <i class = "fas fa-arrow-alt-circle-right"></i>
@@ -225,8 +261,8 @@
                                 Kitchen, Living private Car park
                             </li>
                             <li>
-    border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
-    <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <!-- border-bottom: 0.5px solid rgba(249, 211, 66, 0.3); -->
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
                                 A large compound
                             </li>
                         </ul>
@@ -235,17 +271,49 @@
                         <p class = "rate">
                             <span>Ghc7000.00 /</span> Per Night
                         </p>
-                        <button type = "button" class = "btn">book now</button>
+                        
                     </div>
                 </article>
                 <!-- end of single room -->
                 <!-- single room -->
-                <article class = "room">
+                <article class = "room" style="margin-bottom: 4vh;">
                     <div class = "room-image">
-                        <img src = "images/room2.jpg" alt = "room image">
+                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                
+                            <div class="carousel-item active" data-bs-interval="1500">
+                              <img src="images/room2.jpg" class="d-block w-100 img-caro" alt="...">
+                            </div>
+                            
+                            <div class="carousel-item" data-bs-interval="1500">
+                              <img src="images/pel2.jpeg" class="d-block w-100 img-caro" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                              <img src="images/pel3.jpeg" class="d-block w-100 img-caro" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                              <img src="images/pel1.jpeg" class="d-block w-100 img-caro" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                              <img src="images/pel5.jpeg" class="d-block w-100 img-caro" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                              <img src="images/pel6.jpeg" class="d-block w-100 img-caro" alt="...">
+                            </div>
+                            
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
                     </div>
                     <div class = "room-text">
-                        <h3 style="color: var(--yellow);">Pelican 6</h3>
+                        <h3 style="color: var(--yellow); font-weight: 800; letter-spacing: 2px;">Pelican 6</h3>
                         <ul>
                             <li>
                                 <i class = "fas fa-arrow-alt-circle-right"></i>
@@ -265,15 +333,37 @@
                         <p class = "rate">
                             <span>Ghc5000.00 /</span> Per Night
                         </p>
-                        <button type = "button" class = "btn">book now</button>
                     </div>
                 </article>
                 <!-- end of single room -->
                 <!-- single room -->
                 <article class = "room">
-                    <div class = "room-image">
-                        <img src = "images/pelican.jpeg" alt = "room image">
+                  <div class = "room-image">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+            
+                        <div class="carousel-item active" data-bs-interval="2000">
+                          <img src="images/pelican.jpeg" class="d-block w-100 img-caro" alt="...">
+                        </div>
+                        
+                        <div class="carousel-item" data-bs-interval="2000">
+                          <img src="images/sil2.jpeg" class="d-block w-100 img-caro" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                          <img src="images/sil1.jpeg" class="d-block w-100 img-caro" alt="...">
+                        </div>
+                        
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
                     </div>
+                </div>
                     <div class = "room-text">
                         <h3 style="color: var(--yellow);">Silver House 1</h3>
                         <ul>
@@ -295,7 +385,6 @@
                         <p class = "rate">
                             <span>Ghc5000.00 /</span> Per Night
                         </p>
-                        <button type = "button" class = "btn">book now</button>
                     </div>
                 </article>
                 <!-- end of single room -->

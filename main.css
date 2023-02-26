@@ -69,7 +69,7 @@ img{
 
 /* header */
 .header{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/w.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/n1.jpeg") center/cover no-repeat;
     min-height: 100vh;
     color: #fff;
     padding: 25px;

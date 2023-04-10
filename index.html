@@ -108,6 +108,57 @@
         
 
         <!-- body content  -->
+        <article class = "room" style="margin-bottom: 6vh;">
+
+          <div class = "room-image">
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+      
+                  <div class="carousel-item active" data-bs-interval="2000" style="height: 650px;">
+                    <img src="images/image1.jpeg" class="d-block w-100 img-caro" alt="..." style="position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-height: 650px;
+                    object-fit: contain;">
+                  </div>
+                  
+                  <div class="carousel-item" data-bs-interval="2000" style="height: 650px;">
+                    <img src="images/image2.jpeg" class="d-block w-100 img-caro" alt="..." style="position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-height: 650px;
+                    object-fit: contain;">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000" style="height: 650px;">
+                    <img src="images/image3.jpeg" class="d-block w-100 img-caro" alt="..." style="position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-height: 650px;
+                    object-fit: contain;">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000" style="height: 650px;">
+                    <img src="images/image4.jpeg" class="d-block w-100 img-caro" alt="..." style="position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-height: 650px;
+                    object-fit: contain;">
+                  </div>
+                  
+                 
+                  
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+        </article>
+
         <section class = "services sec-width" id = "services">
             
             <h2 class="heads">FACILITIES</h2>
@@ -194,6 +245,7 @@
                 </article>
             </div>
         </section>
+        
 
         <section>
           <div class = "book">
@@ -641,39 +693,34 @@
                 </div>
             </div>
         </section>
-        <!-- end of body content -->
-        
+        <!-- end of body content -->         
 
+           
+  </body>
 
-                <!-- Modal -->
+          <!-- // <script type="text/javascript">
+          //   $(window).on('load', function() {
+          //       $('#staticBackdrop').modal('show');
+          //   });
+          // </script>
 
+          // <script>  
 
+          // sessionStorage.setItem('cart', [])
+          //   function ReLoadImages(){
+          //       $('img[data-lazysrc]').each( function(){
+          //           //* set the img src from data-src
+          //           $( this ).attr( 'src', $( this ).attr( 'data-lazysrc' ) );
+          //           }
+          //       );
+          //   }
             
-          </div>
-
-          <script type="text/javascript">
-            $(window).on('load', function() {
-                $('#staticBackdrop').modal('show');
-            });
-          </script>
-
-          <script>  
-
-          sessionStorage.setItem('cart', [])
-            function ReLoadImages(){
-                $('img[data-lazysrc]').each( function(){
-                    //* set the img src from data-src
-                    $( this ).attr( 'src', $( this ).attr( 'data-lazysrc' ) );
-                    }
-                );
-            }
-            
-            document.addEventListener('readystatechange', event => {
-                if (event.target.readyState === "interactive") {  //or at "complete" if you want it to execute in the most last state of window.
-                    ReLoadImages();
-                }
-            });
-            </script>
+          //   document.addEventListener('readystatechange', event => {
+          //       if (event.target.readyState === "interactive") {  //or at "complete" if you want it to execute in the most last state of window.
+          //           ReLoadImages();
+          //       }
+          //   });
+          //   </script> -->
 
 
         <!-- footer -->
